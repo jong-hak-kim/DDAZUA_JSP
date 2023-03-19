@@ -25,6 +25,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Algorithm\Baekjoon"/>
 			<item value="C:\Users\whdgk\Downloads\JSP 기초부터 실무까지\37강\수업내용\lec20_goodjobedu_jsp_part02"/>
 			<item value="C:\Users\whdgk\Downloads\JSP 기초부터 실무까지\36강\수업내용\lec19_goodjobedu_jsp_part02"/>
 			<item value="C:\Users\whdgk\Downloads\JSP 기초부터 실무까지\35강\수업내용\lec18_goodjobedu_jsp_part02"/>

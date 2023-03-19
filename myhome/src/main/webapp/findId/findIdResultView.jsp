@@ -1,16 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<jsp:include page="/layout/header.jsp">
+	<jsp:param name="title" value="Find id" />
+</jsp:include>
+
 <%@ include file="/layout/header.jsp"%>
 
-<%
+<c:set var="message">
+	<c:choose>
+		<c:when test="${ requestScope.id != null }">
+				고객님의 ID는 다음과 같습니다.<br>${requestScope.id }
+			</c:when>
+		<c:otherwise>
+				찾으시는 ID는 존재하지 않습니다.
+			</c:otherwise>
+	</c:choose>
+</c:set>
 
-	String id = (String)request.getAttribute("id");	
-	boolean check = id != null;
-	String message = check ? "고객님의 아이디는 다음과 같습니다.<br>" + id : "찾으시는 ID는 존재하지 않습니다.";
-%>
-
-<h4><%=message %></h4>
+<h4>${ message }</h4>
 <br>
-<input type = "button" value = "메인으로" onclick="location.href='/myhome/index.jsp'">
-<input type = "button" value = "로그인 하러가기" onclick="location.href='/myhome/login/loginView.jsp'">
-<%@ include file="/layout/footer.jsp"%>
+<input type="button" value="메인으로"
+	onclick="location.href='/myhome/index.jsp'">
+<input type="button" value="로그인 하러가기"
+	onclick="location.href='/myhome/login/loginView.jsp'">
+<jsp:include page="/layout/footer.jsp" />

@@ -1,30 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="/layout/header.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<jsp:include page="/layout/header.jsp">
+	<jsp:param name="title" value="Login" />
+</jsp:include>
 
 <%
-String nickname = (String) request.getAttribute("nickname");
+String nickname = (String) request.getAttribute("nickname"); // ${request.nickname}
 //nickname 속성(attribute)이 없으면, null이 리턴함.
 %>
 
-<%
-if (nickname != null) {
-%>
-<h3>
-	환영합니다,
-	<%=nickname%>님!
-</h3>
-<br>
-<h6><a href ='/myhome/signout/signoutView.jsp'>회원 탈퇴</a></h6>
-<%
-} else {
-%>
-<h3>아이디 혹은 비밀번호를 확인해주세요.</h3>
-<%
-}
-%>
+<c:choose>
+	<c:when test="${requestScope.nickname != null }">
+		<h3>환영합니다, ${requestScope.nickname }님!</h3>
+		<br>
+		<h6>
+			<a href='/myhome/signout/signoutView.jsp'>회원 탈퇴</a>
+		</h6>
+	</c:when>
+	<c:otherwise>
+		<h3>아이디 혹은 비밀번호를 확인해주세요.</h3>
+	</c:otherwise>
+</c:choose>
+
 
 <input type="button" value="메인으로"
 	onclick="location.href='/myhome/index.jsp'">
 
-<%@ include file="/layout/footer.jsp"%>
+<jsp:include page="/layout/footer.jsp" />

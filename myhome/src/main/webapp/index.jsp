@@ -4,10 +4,10 @@
 request.setCharacterEncoding("UTF-8");
 %>
 <jsp:include page="/layout/header.jsp">
-	<jsp:param name="title" value="메인페이지!" />
+	<jsp:param name="title" value="Welcome!" />
 </jsp:include>
 <H2>Welcome!</H2>
 <h3>나의 홈페이지!</h3>
 <h5>이곳은 메인페이지입니다.</h5>
 
-<%@ include file="/layout/footer.jsp"%>
+<jsp:include page= "/layout/footer.jsp"/>

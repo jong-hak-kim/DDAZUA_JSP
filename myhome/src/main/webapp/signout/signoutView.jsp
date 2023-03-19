@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="/layout/header.jsp"%>
+
+<jsp:include page="/layout/header.jsp">
+	<jsp:param name="title" value="Find id" />
+</jsp:include>
 
 
 <form action="signoutLogic.jsp" method="post">
@@ -16,7 +19,7 @@
 				placeholder="비밀번호를 입력하세요."></td>
 		</tr>
 		<tr>
-			<td align = "center"><input type="submit" value="탈퇴"></td>
+			<td align="center"><input type="submit" value="탈퇴"></td>
 		</tr>
 
 	</table>
@@ -24,4 +27,4 @@
 </form>
 
 
-<%@ include file="/layout/footer.jsp"%>
+<jsp:include page="/layout/footer.jsp" />

@@ -1,17 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%
-String titleParam = request.getParameter("title");
-String title = "Jonghak's Page";
-if(titleParam != null){
-	title = "Jonghak's : " + titleParam;
-}
-%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title><%=title%></title>
+<title>Jonghak's : ${param.title != null ? param.title : "My WebPage!"}</title>
 <link rel="stylesheet" type="text/css" href="/myhome/layout/layout.css">
 </head>
 <body>

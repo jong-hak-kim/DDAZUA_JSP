@@ -4,5 +4,6 @@
   <module moduleId="org.eclipse.jst.jee.server:lec17_goodjobedu_jsp_part02" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:lec18_goodjobedu_jsp_part02" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:lec19_goodjobedu_jsp_part02" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:myservlet" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:myhome" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>
